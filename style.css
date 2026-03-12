@@ -175,7 +175,7 @@ a {
     top: 0; left: 0; width: 100%; height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: -2;
 }
 
@@ -183,7 +183,7 @@ a {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, var(--bg-dark) 0%, rgba(7,11,19,0.5) 50%, var(--bg-dark) 100%);
+    background: linear-gradient(to bottom, rgba(7,11,19,0.6) 0%, rgba(7,11,19,0.2) 50%, var(--bg-dark) 100%);
     z-index: -1;
 }
 
