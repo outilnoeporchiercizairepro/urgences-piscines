@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
-            if(target) {
+            if (target) {
                 e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth'
@@ -20,20 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    if(hamburger && navLinks) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            if(navLinks.classList.contains('active')) {
+            if (navLinks.classList.contains('active')) {
                 hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
             } else {
                 hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
             }
         });
-        
+
         // Fermer le menu si on clique sur un lien (mobile)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                if(window.innerWidth <= 768) {
+                if (window.innerWidth <= 768) {
                     navLinks.classList.remove('active');
                     hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
                 }
