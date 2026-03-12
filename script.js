@@ -78,3 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Fonction pour développer les informations des cartes produits
+function toggleInfo(button) {
+    const parent = button.parentElement;
+    const infoDiv = parent.querySelector('.more-info');
+    const icon = button.querySelector('i');
+    
+    if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+        infoDiv.style.display = "block";
+        button.innerHTML = 'Fermer <i class="fa-solid fa-chevron-up"></i>';
+    } else {
+        infoDiv.style.display = "none";
+        button.innerHTML = 'En savoir plus <i class="fa-solid fa-chevron-down"></i>';
+    }
+}

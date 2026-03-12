@@ -355,6 +355,32 @@ section {
     margin-top: 10px;
 }
 
+.btn-more-info {
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-family: var(--font-body);
+}
+
+.btn-more-info:hover {
+    color: var(--secondary);
+}
+
+.more-info {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    text-align: left;
+    line-height: 1.5;
+}
+
 /* HOW IT WORKS */
 .how-it-works h2 {
     text-align: center;

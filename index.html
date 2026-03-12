@@ -81,33 +81,47 @@
     <!-- LES PRODUITS -->
     <section class="products">
         <div class="container">
-            <div class="section-header animate-on-scroll fade-in">
-                <h2>Ce que vous trouverez dans le distributeur</h2>
+            <h2 class="section-title animate-on-scroll fade-in">Ce que vous trouverez dans le <span class="highlight">distributeur</span></h2>
+            <p class="section-subtitle">Chlore choc, ajusteurs de pH, anti-algues... Retrouvez les meilleures marques professionnelles à votre disposition 24h/24.</p>
+            
+            <div class="products-grid">
                 <!-- [PLACEHOLDER : LOGOS DES MARQUES (HTH, BAYROL, ETC)] -->
                 <p class="brands-placeholder">[ INSÉRER LOGOS DES MARQUES : HTH, BAYROL... ]</p>
             </div>
             
             <div class="products-grid">
                 <!-- Produit 1 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-1">
-                    <div class="product-icon"><i class="fa-solid fa-flask"></i></div>
-                    <h3>Chlore choc & Galets</h3>
-                    <p>Pour rattraper ou maintenir votre eau.</p>
-                    <span class="product-format">[Formats: Ex: Seaux 1kg et 3kg]</span>
+                <div class="product-card glass-panel animate-on-scroll slide-up">
+                    <div class="product-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Chlore Choc & Lent</h3>
+                    <p>Pour remonter rapidement le taux de chlore ou l'entretien régulier.</p>
+                    <span class="product-format">Galets 200g / Poudre 1kg</span>
+                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="more-info" style="display:none;">
+                        Idéal en cas d'eau trouble ou verte. Le chlore choc agit rapidement pour détruire les bactéries, tandis que le chlore lent assure la désinfection continue de votre bassin sur plusieurs jours.
+                    </div>
                 </div>
                 <!-- Produit 2 -->
                 <div class="product-card glass-panel animate-on-scroll slide-up delay-2">
-                    <div class="product-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                    <h3>Régulateurs de pH</h3>
-                    <p>pH Plus et Moins : La base d'une eau saine.</p>
-                    <span class="product-format">[Formats: Ex: Poudre 1kg ou Liquide 5L]</span>
+                    <div class="product-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Anti-algues & Floculant</h3>
+                    <p>Pour rattraper une eau verte ou trouble en quelques heures.</p>
+                    <span class="product-format">Liquide 1L / Chaussettes</span>
+                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="more-info" style="display:none;">
+                        L'anti-algues prévient et détruit les algues récalcitrantes. Le floculant permet d'agglomérer les micro-particules en suspension pour qu'elles soient filtrées, rendant l'eau cristalline.
+                    </div>
                 </div>
                 <!-- Produit 3 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-3">
-                    <div class="product-icon"><i class="fa-solid fa-droplet-slash"></i></div>
-                    <h3>Anti-algues & Floculant</h3>
-                    <p>Pour retrouver une eau cristalline.</p>
-                    <span class="product-format">[Formats: Ex: Bidons 1L]</span>
+                <div class="product-card glass-panel animate-on-scroll slide-up delay-1">
+                    <div class="product-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>pH Plus et pH Moins</h3>
+                    <p>Indispensable pour équilibrer l'eau et rendre le chlore efficace.</p>
+                    <span class="product-format">Poudre 1kg / 5kg</span>
+                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="more-info" style="display:none;">
+                        Un pH mal ajusté (idéalement entre 7.0 et 7.4) irrite la peau et annule l'effet de vos produits de désinfection. Réagissez immédiatement pour stabiliser votre eau.
+                    </div>
                 </div>
                 <!-- Produit 4 -->
                 <div class="product-card glass-panel animate-on-scroll slide-up delay-4">
