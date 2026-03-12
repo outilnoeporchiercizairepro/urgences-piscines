@@ -1,12 +1,13 @@
-
 FROM nginx:alpine
 
 # Optionnel mais recommandé pour éviter le cache navigateur en dev:
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY index.html /usr/share/nginx/html/index.html
-COPY script.js /usr/share/nginx/html/script.js
-COPY style.css /usr/share/nginx/html/style.css
+# Copier tous les fichiers statiques (HTML, CSS, JS, Images)
+COPY *.html /usr/share/nginx/html/
+COPY *.css /usr/share/nginx/html/
+COPY *.js /usr/share/nginx/html/
+COPY *.png /usr/share/nginx/html/
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
