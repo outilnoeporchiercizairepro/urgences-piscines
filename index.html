@@ -91,51 +91,93 @@
             
             <div class="products-grid">
                 <!-- Produit 1 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up">
-                    <div class="product-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Chlore Choc & Lent</h3>
-                    <p>Pour remonter rapidement le taux de chlore ou l'entretien régulier.</p>
-                    <span class="product-format">Galets 200g / Poudre 1kg</span>
-                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="more-info" style="display:none;">
-                        Idéal en cas d'eau trouble ou verte. Le chlore choc agit rapidement pour détruire les bactéries, tandis que le chlore lent assure la désinfection continue de votre bassin sur plusieurs jours.
+                <div class="product-card animate-on-scroll slide-up" onclick="this.classList.toggle('flipped')">
+                    <div class="product-card-inner">
+                        <div class="product-card-front glass-panel">
+                            <div class="product-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>Chlore Choc & Lent</h3>
+                            <p>Remonter rapidement le chlore ou gérer l'entretien régulier.</p>
+                            <span class="product-format">Galets 200g / Poudre 1kg</span>
+                            <button class="btn-pill">En savoir plus <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                        <div class="product-card-back glass-panel-solid">
+                            <h3 style="color:white; margin-bottom: 10px;">Action Chlore</h3>
+                            <p style="font-size:0.9rem;">Idéal en cas d'eau trouble ou verte. Le chlore choc agit rapidement pour détruire les bactéries, tandis que le chlore lent assure la désinfection continue de votre bassin sur plusieurs jours.</p>
+                            <button class="btn-pill btn-pill-outline"><i class="fa-solid fa-rotate-left"></i> Retour</button>
+                        </div>
                     </div>
                 </div>
+                
                 <!-- Produit 2 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-2">
-                    <div class="product-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3>Anti-algues & Floculant</h3>
-                    <p>Pour rattraper une eau verte ou trouble en quelques heures.</p>
-                    <span class="product-format">Liquide 1L / Chaussettes</span>
-                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="more-info" style="display:none;">
-                        L'anti-algues prévient et détruit les algues récalcitrantes. Le floculant permet d'agglomérer les micro-particules en suspension pour qu'elles soient filtrées, rendant l'eau cristalline.
+                <div class="product-card animate-on-scroll slide-up delay-1" onclick="this.classList.toggle('flipped')">
+                    <div class="product-card-inner">
+                        <div class="product-card-front glass-panel">
+                            <div class="product-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <h3>Anti-algues & Floculant</h3>
+                            <p>Rattraper une eau verte ou trouble en quelques heures.</p>
+                            <span class="product-format">Liquide 1L / Chaussettes</span>
+                            <button class="btn-pill">En savoir plus <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                        <div class="product-card-back glass-panel-solid">
+                            <h3 style="color:white; margin-bottom: 10px;">Action Anti-algues</h3>
+                            <p style="font-size:0.9rem;">L'anti-algues prévient et détruit les algues récalcitrantes. Le floculant permet d'agglomérer les micro-particules en suspension pour qu'elles soient filtrées, rendant l'eau cristalline.</p>
+                            <button class="btn-pill btn-pill-outline"><i class="fa-solid fa-rotate-left"></i> Retour</button>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Produit 3 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-1">
-                    <div class="product-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                    <h3>pH Plus et pH Moins</h3>
-                    <p>Indispensable pour équilibrer l'eau et rendre le chlore efficace.</p>
-                    <span class="product-format">Poudre 1kg / 5kg</span>
-                    <button class="btn-more-info" onclick="toggleInfo(this)">En savoir plus <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="more-info" style="display:none;">
-                        Un pH mal ajusté (idéalement entre 7.0 et 7.4) irrite la peau et annule l'effet de vos produits de désinfection. Réagissez immédiatement pour stabiliser votre eau.
+                <div class="product-card animate-on-scroll slide-up delay-2" onclick="this.classList.toggle('flipped')">
+                    <div class="product-card-inner">
+                        <div class="product-card-front glass-panel">
+                            <div class="product-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                            <h3>pH Plus et pH Moins</h3>
+                            <p>Équilibrer l'eau et rendre le chlore vraiment efficace.</p>
+                            <span class="product-format">Poudre 1kg / 5kg</span>
+                            <button class="btn-pill">En savoir plus <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                        <div class="product-card-back glass-panel-solid">
+                            <h3 style="color:white; margin-bottom: 10px;">Action Régulateur pH</h3>
+                            <p style="font-size:0.9rem;">Un pH mal ajusté (idéalement entre 7.0 et 7.4) irrite la peau et annule l'effet de vos produits de désinfection. Réagissez immédiatement pour stabiliser votre eau pluvieuse ou trop chaude.</p>
+                            <button class="btn-pill btn-pill-outline"><i class="fa-solid fa-rotate-left"></i> Retour</button>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Produit 4 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-4">
-                    <div class="product-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
-                    <h3>Sel pour piscine</h3>
-                    <p>Pour les traitements par électrolyse.</p>
-                    <span class="product-format">[Formats: Ex: Sacs 25kg]</span>
+                <div class="product-card animate-on-scroll slide-up delay-3" onclick="this.classList.toggle('flipped')">
+                    <div class="product-card-inner">
+                        <div class="product-card-front glass-panel">
+                            <div class="product-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                            <h3>Sel pour piscine</h3>
+                            <p>Pour l'entretien par électrolyse. Pur & sans additifs.</p>
+                            <span class="product-format">Sacs de 25kg</span>
+                            <button class="btn-pill">En savoir plus <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                        <div class="product-card-back glass-panel-solid">
+                            <h3 style="color:white; margin-bottom: 10px;">Action Sel</h3>
+                            <p style="font-size:0.9rem;">Sel de très haute pureté, conçu spécifiquement pour les piscines équipées d'un électrolyseur. Une dissolution rapide et sans résidu pour protéger votre cellule de l'entartrage et garantir son fonctionnement.</p>
+                            <button class="btn-pill btn-pill-outline"><i class="fa-solid fa-rotate-left"></i> Retour</button>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Produit 5 -->
-                <div class="product-card glass-panel animate-on-scroll slide-up delay-5">
-                    <div class="product-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h3>Bandelettes test</h3>
-                    <p>Pour analyser votre eau immédiatement.</p>
-                    <span class="product-format">[Marque: Ex: Aquachek]</span>
+                <div class="product-card animate-on-scroll slide-up delay-4" onclick="this.classList.toggle('flipped')">
+                    <div class="product-card-inner">
+                        <div class="product-card-front glass-panel">
+                            <div class="product-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <h3>Bandelettes test & Access.</h3>
+                            <p>Analyser votre eau immédiatement sans erreur.</p>
+                            <span class="product-format">Boîtes 50 bandelettes</span>
+                            <button class="btn-pill">En savoir plus <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                        <div class="product-card-back glass-panel-solid">
+                            <h3 style="color:white; margin-bottom: 10px;">Action Analyse</h3>
+                            <p style="font-size:0.9rem;">Mesurez précisément le taux de Chlore, le pH, et l'alcalinité (TAC) de votre eau en moins de 15 secondes. L'étape indispensable avant de rajouter quoi que ce soit dans votre bassin.</p>
+                            <button class="btn-pill btn-pill-outline"><i class="fa-solid fa-rotate-left"></i> Retour</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
