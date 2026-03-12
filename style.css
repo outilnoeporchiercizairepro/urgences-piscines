@@ -24,12 +24,16 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
