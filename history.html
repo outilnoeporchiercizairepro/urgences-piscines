@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre histoire | Urgences Piscine</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV / HEADER -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><i class="fa-solid fa-droplet"></i> UrgencesPiscine.fr</a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">Qui sommes-nous ?</a>
+            <a href="history.html" class="active-link" style="color:var(--primary)">Notre histoire</a>
+            <a href="index.html#localisation" class="btn-primary btn-small">
+                📍 S'y rendre
+            </a>
+        </div>
+        
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="page-content" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">L'histoire d'Urgences Piscine</h1>
+            
+            <div class="timeline" style="margin-top: 40px;">
+                <!-- Etape 1 -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px; border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;">Le Constat : Des étés contrariés</h3>
+                    <p>
+                        [INSÉRER TEXTE : Ex: Tout a commencé lors de la canicule de l'été 2022. Des dizaines de propriétaires se sont retrouvés avec une eau verte un dimanche matin. Sans produit, impossible de sauver le bassin. C'est là que l'idée d'un service d'urgence a germé.]
+                    </p>
+                </div>
+
+                <!-- Etape 2 -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px; border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;">La Conception du 1er Distributeur</h3>
+                    <p>
+                        [INSÉRER TEXTE : Ex: Il a fallu repenser une machine capable d'accueillir des seaux de chlore, des bidons et de fonctionner de manière totalement autonome en extérieur.]
+                    </p>
+                </div>
+
+                <!-- Etape 3 -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px; border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;">Lancement à Caveirac</h3>
+                    <p>
+                        [INSÉRER TEXTE : Ex: En 2024, le premier distributeur Urgences Piscine voit le jour à Caveirac, idéalement situé entre Nîmes et la Vaunage. Le succès est immédiat, prouvant que ce service correspondait à un vrai besoin.]
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-droplet"></i> UrgencesPiscine.fr</h3>
+                <p>Le distributeur 24/7 pour sauver votre eau.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact & Accès</h4>
+                <p>2 Route de Nîmes, 30820 Caveirac</p>
+                <p>Assistance : <strong>[INSÉRER NUM TÉLÉPHONE]</strong></p>
+                <p>Email : <strong>[INSÉRER EMAIL CONTACT]</strong></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrgencesPiscine. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script menu burger -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')) {
+                hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

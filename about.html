@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui sommes-nous ? | Urgences Piscine</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV / HEADER -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><i class="fa-solid fa-droplet"></i> UrgencesPiscine.fr</a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="about.html" class="active-link" style="color:var(--primary)">Qui sommes-nous ?</a>
+            <a href="history.html">Notre histoire</a>
+            <a href="index.html#localisation" class="btn-primary btn-small">
+                📍 S'y rendre
+            </a>
+        </div>
+        
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="page-content" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">Qui sommes-nous ?</h1>
+            <div class="glass-panel" style="padding: 40px; margin-bottom: 40px;">
+                <h2 style="margin-bottom: 20px; color: var(--primary);">Des professionnels de la piscine à votre service</h2>
+                <p style="margin-bottom: 15px; font-size: 1.1rem;">
+                    [INSÉRER TEXTE DE PRÉSENTATION : Ex: Je m'appelle Jean, pisciniste métier depuis plus de 10 ans dans la région de Nîmes et de la Vaunage...]
+                </p>
+                <p style="margin-bottom: 15px; font-size: 1.1rem;">
+                    [INSÉRER TEXTE : Ex: Au quotidien, je conseille et j'accompagne de nombreux clients dans l'entretien de leur bassin. J'ai constaté que très souvent, les urgences arrivent au pire moment : le samedi soir, le dimanche ou un jour férié.]
+                </p>
+                <p style="font-size: 1.1rem;">
+                    [INSÉRER TEXTE : Ex: C'est pour pallier ce manque et vous garantir une tranquillité d'esprit totale que j'ai décidé de créer Urgences Piscine, votre allié dépannage accessible 24h/24 et 7j/7, avec les mêmes produits professionnels que ceux utilisés dans mon activité quotidienne.]
+                </p>
+            </div>
+            
+            <div style="text-align: center;">
+                 <!-- [PLACEHOLDER : IMAGE DU FONDATEUR OU DE L'EQUIPE] -->
+                 <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=800&auto=format&fit=crop" alt="L'équipe" style="max-width: 600px; border-radius: 16px; border: 2px solid var(--primary); box-shadow: 0 0 20px var(--primary-glow);"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-droplet"></i> UrgencesPiscine.fr</h3>
+                <p>Le distributeur 24/7 pour sauver votre eau.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact & Accès</h4>
+                <p>2 Route de Nîmes, 30820 Caveirac</p>
+                <p>Assistance : <strong>[INSÉRER NUM TÉLÉPHONE]</strong></p>
+                <p>Email : <strong>[INSÉRER EMAIL CONTACT]</strong></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrgencesPiscine. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script menu burger -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')) {
+                hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
