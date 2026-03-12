@@ -41,8 +41,8 @@
     <!-- CONTENT -->
     <section class="page-content" style="padding-top: 150px; min-height: 80vh;">
         <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 20px;">Qui sommes-nous ?</h1>
-            <div class="glass-panel" style="padding: 40px; margin-bottom: 40px;">
+            <h1 class="animate-on-scroll fade-in" style="font-size: 3rem; margin-bottom: 20px;">Qui sommes-nous ?</h1>
+            <div class="glass-panel animate-on-scroll slide-up delay-1" style="padding: 40px; margin-bottom: 40px;">
                 <h2 style="margin-bottom: 20px; color: var(--primary);">Des professionnels de la piscine à votre service</h2>
                 <p style="margin-bottom: 15px; font-size: 1.1rem;">
                     [INSÉRER TEXTE DE PRÉSENTATION : Ex: Je m'appelle Jean, pisciniste métier depuis plus de 10 ans dans la région de Nîmes et de la Vaunage...]
@@ -55,7 +55,7 @@
                 </p>
             </div>
             
-            <div style="text-align: center;">
+            <div class="animate-on-scroll fade-in delay-2" style="text-align: center;">
                  <!-- [PLACEHOLDER : IMAGE DU FONDATEUR OU DE L'EQUIPE] -->
                  <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=800&auto=format&fit=crop" alt="L'équipe" style="max-width: 600px; border-radius: 16px; border: 2px solid var(--primary); box-shadow: 0 0 20px var(--primary-glow);"/>
             </div>
@@ -81,19 +81,7 @@
         </div>
     </footer>
 
-    <!-- Script menu burger -->
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            if(navLinks.classList.contains('active')) {
-                hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            } else {
-                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            }
-        });
-    </script>
+    <!-- Script centralisé -->
+    <script src="script.js"></script>
 </body>
 </html>
