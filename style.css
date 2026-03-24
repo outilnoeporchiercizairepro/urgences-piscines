@@ -1,20 +1,20 @@
-/* CSS VARIABLES - Premium Light Theme */
+/* CSS VARIABLES - Strict 3 Colors Theme (Cyan / Anthracite / White) */
 :root {
-    --primary: #0088ff;
-    /* Bleu vif et rassurant */
-    --primary-glow: rgba(0, 136, 255, 0.3);
-    --secondary: #0055ff;
-    /* Bleu profond */
+    --primary: #40cfd4;
+    /* Cyan / Turquoise */
+    --primary-glow: rgba(64, 207, 212, 0.3);
+    --secondary: #37bcc0;
+    /* Cyan profond */
 
-    --bg-dark: #f8fafc;
-    /* Fond clair très légèrement bleuté (slate-50) */
-    --bg-panel: rgba(255, 255, 255, 0.7);
-    /* Panneaux blancs translucides */
+    --bg-dark: #121212;
+    /* Anthracite */
+    --bg-panel: rgba(255, 255, 255, 0.95);
+    /* Panneaux blancs premium */
 
-    --text-main: #0f172a;
-    /* Texte foncé principal (slate-900) */
-    --text-muted: #475569;
-    /* Texte secondaire gris (slate-600) */
+    --text-main: #121212;
+    /* Texte foncé principal */
+    --text-muted: #666666;
+    /* Texte secondaire gris */
 
     --border-color: rgba(0, 0, 0, 0.08);
     /* Bordures discrètes */
@@ -82,6 +82,7 @@ a {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    color: var(--text-main);
     /* Ombre douce */
 }
 
@@ -125,7 +126,7 @@ a {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 136, 255, 0.6);
+    box-shadow: 0 6px 20px rgba(64, 207, 212, 0.6);
 }
 
 .btn-secondary {
@@ -135,7 +136,7 @@ a {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 136, 255, 0.1);
+    background: rgba(64, 207, 212, 0.1);
 }
 
 .btn-small {
@@ -181,7 +182,7 @@ a {
     width: 100%;
     z-index: 100;
     transition: all 0.3s ease;
-    background: var(--bg-dark);
+    background: #ffffff;
     /* Sur fond clair directement en haut pour éviter l'effet glass transparent inutile */
     border-bottom: 1px solid var(--border-color);
 }
@@ -192,6 +193,9 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
 }
 
 .nav-links {
@@ -217,7 +221,7 @@ a {
     cursor: pointer;
 }
 
-/* HERO SECTION LIGHT */
+/* HERO SECTION LIGHT (NOW DARK ANTHRACITE) */
 .hero-light {
     position: relative;
     padding: 160px 5% 80px;
@@ -225,10 +229,21 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(180deg, rgba(0, 136, 255, 0.05) 0%, var(--bg-dark) 100%);
+    background-color: var(--bg-dark);
+    color: #ffffff;
+}
+
+.hero-light::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=2070') center/cover;
+    opacity: 0.15;
+    z-index: 0;
 }
 
 .hero-content {
+    position: relative;
     max-width: 900px;
     margin: 0 auto;
     z-index: 1;
@@ -258,12 +273,12 @@ a {
 
 .subtitle {
     font-size: 1.2rem;
-    color: var(--text-muted);
+    color: #cccccc;
     margin-bottom: 40px;
 }
 
 .subtitle strong {
-    color: var(--text-main);
+    color: #ffffff;
 }
 
 .cta-group {
@@ -287,26 +302,38 @@ a {
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: #eeeeee;
 }
 
 .trust-badges i {
     color: var(--primary);
 }
 
-/* SECTION PADDING */
+/* SECTION PADDING & COLORS (STRICT ALTERNATION) */
 section {
     padding: 100px 0;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
+.concept { background-color: #ffffff; color: var(--text-main); }
+.products { background-color: var(--bg-dark); color: #ffffff; }
+.products .section-subtitle { color: #cccccc; }
+.how-it-works { background-color: #ffffff; color: var(--text-main); }
+.location { background-color: var(--bg-dark); color: #ffffff; }
+.faq { background-color: #ffffff; color: var(--text-main); }
 
-.section-header h2 {
+.section-title {
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* CONCEPT */
@@ -419,6 +446,7 @@ section {
 .product-card-front h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    color: var(--text-main);
 }
 
 .product-card-front p {
@@ -610,10 +638,10 @@ section {
 
 /* FOOTER */
 footer {
-    background: #ffffff;
-    /* Footer clair */
+    background: var(--bg-dark);
+    color: #ffffff;
     padding: 60px 0 20px;
-    border-top: 1px solid var(--border-color);
+    border-top: none;
 }
 
 .footer-grid {
@@ -630,13 +658,14 @@ footer {
 }
 
 .footer-col h4 {
+    color: #ffffff;
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
 .footer-col p,
 .legal-links li {
-    color: var(--text-muted);
+    color: #aaaaaa;
     margin-bottom: 10px;
     font-size: 0.9rem;
 }
@@ -647,10 +676,10 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    color: var(--text-muted);
+    color: #777777;
     font-size: 0.8rem;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
