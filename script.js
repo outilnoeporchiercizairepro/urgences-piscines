@@ -78,3 +78,116 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+/* -----------------------------------------------------
+   5. CHAT WIDGET LOGIC (n8n Integration)
+----------------------------------------------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const chatButton = document.getElementById('chat-button');
+    const chatPopup = document.getElementById('chat-popup');
+    const closeChat = document.getElementById('close-chat');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+    const typingIndicator = document.getElementById('typing-indicator');
+    const chatPromo = document.querySelector('.chat-bubble-promo');
+
+    if (!chatButton) return;
+
+    // Toggle Chat
+    chatButton.addEventListener('click', () => {
+        chatPopup.classList.toggle('active');
+        if (chatPopup.classList.contains('active')) {
+            chatInput.focus();
+            if (chatPromo) chatPromo.style.display = 'none';
+        } else {
+            if (chatPromo) chatPromo.style.display = 'block';
+        }
+    });
+
+    closeChat.addEventListener('click', () => {
+        chatPopup.classList.remove('active');
+        if (chatPromo) chatPromo.style.display = 'block';
+    });
+
+    // Handle Send Message
+    chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // User Message UI
+        addMessage(message, 'user');
+        chatInput.value = '';
+
+        // Show Typing
+        typingIndicator.style.display = 'flex';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        try {
+            const response = await fetch('https://n8n.prcz.fr/webhook-test/urgences-piscines', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            });
+
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const data = await response.json();
+            
+            // Assume the response from n8n is either a string or an object with an 'output' or 'message' field
+            const botResponse = data.output || data.message || (typeof data === 'string' ? data : "Désolé, je ne peux pas répondre pour le moment.");
+            
+            addMessage(botResponse, 'bot');
+        } catch (error) {
+            console.error('Error:', error);
+            addMessage("Oups ! Une erreur est survenue lors de la connexion au service d'assistance.", 'bot');
+        } finally {
+            typingIndicator.style.display = 'none';
+        }
+    });
+
+    function addMessage(text, side) {
+        const msgDiv = document.createElement('div');
+        msgDiv.classList.add('message', side);
+        
+        // Render Markdown for bot messages
+        if (side === 'bot' && typeof marked !== 'undefined') {
+            msgDiv.innerHTML = marked.parse(text);
+        } else {
+            msgDiv.textContent = text;
+        }
+        
+        chatMessages.insertBefore(msgDiv, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+});
+
+/* -----------------------------------------------------
+   6. FAQ ACCORDION LOGIC
+----------------------------------------------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});
