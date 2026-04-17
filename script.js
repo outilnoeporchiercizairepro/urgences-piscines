@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
         try {
-            const response = await fetch('https://n8n.prcz.fr/webhook-test/urgences-piscines', {
+            const response = await fetch('https://n8n.prcz.fr/webhook/urgences-piscines', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -137,10 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Network response was not ok');
 
             const data = await response.json();
-            
+
             // Assume the response from n8n is either a string or an object with an 'output' or 'message' field
             const botResponse = data.output || data.message || (typeof data === 'string' ? data : "Désolé, je ne peux pas répondre pour le moment.");
-            
+
             addMessage(botResponse, 'bot');
         } catch (error) {
             console.error('Error:', error);
@@ -153,14 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function addMessage(text, side) {
         const msgDiv = document.createElement('div');
         msgDiv.classList.add('message', side);
-        
+
         // Render Markdown for bot messages
         if (side === 'bot' && typeof marked !== 'undefined') {
             msgDiv.innerHTML = marked.parse(text);
         } else {
             msgDiv.textContent = text;
         }
-        
+
         chatMessages.insertBefore(msgDiv, typingIndicator);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -175,15 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        
+
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
             });
-            
+
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
