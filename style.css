@@ -963,17 +963,33 @@ footer {
 /* Responsive pour mobile */
 @media (max-width: 480px) {
     .chat-popup {
-        width: calc(100vw - 30px);
-        height: 75vh;
-        bottom: 85px;
-        right: -5px;
-        border-radius: 20px;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        border: none;
+        z-index: 99999;
     }
     
     .chat-widget {
         bottom: 15px;
         right: 15px;
     }
+
+    .chat-popup.active {
+        display: flex; /* S'assurer qu'il prend toute la place */
+    }
+
+    .chat-header {
+        padding: 20px;
+        border-radius: 0;
+    }
+    
+    .chat-messages {
+        height: calc(100vh - 140px); /* Ajusté pour le header et l'input */
+    }
+}
 
     .chat-bubble-promo {
         width: 200px;
