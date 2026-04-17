@@ -963,15 +963,27 @@ footer {
 /* Responsive pour mobile */
 @media (max-width: 480px) {
     .chat-popup {
-        width: calc(100vw - 40px);
-        height: 70vh;
-        bottom: 80px;
-        right: -10px;
+        width: calc(100vw - 30px);
+        height: 75vh;
+        bottom: 85px;
+        right: -5px;
+        border-radius: 20px;
     }
     
     .chat-widget {
-        bottom: 20px;
-        right: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .chat-bubble-promo {
+        width: 200px;
+        bottom: 80px;
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+
+    .message {
+        max-width: 90%;
     }
 }
 
