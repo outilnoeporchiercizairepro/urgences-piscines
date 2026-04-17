@@ -963,40 +963,55 @@ footer {
 /* Responsive pour mobile */
 @media (max-width: 480px) {
     .chat-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        bottom: 0;
-        right: 0;
+        margin: 0;
         border-radius: 0;
         border: none;
-        z-index: 99999;
+        z-index: 100000;
+        display: none; /* Caché par défaut, flex quand actif */
+        flex-direction: column;
+        background: #fff;
     }
     
-    .chat-widget {
-        bottom: 15px;
-        right: 15px;
-    }
-
     .chat-popup.active {
-        display: flex; /* S'assurer qu'il prend toute la place */
+        display: flex;
     }
 
     .chat-header {
-        padding: 20px;
+        padding: 15px 20px;
         border-radius: 0;
+        height: 70px;
+        flex-shrink: 0;
     }
     
     .chat-messages {
-        height: calc(100vh - 140px); /* Ajusté pour le header et l'input */
+        flex: 1;
+        height: auto;
+        padding: 20px;
     }
-}
+
+    .chat-input-area {
+        padding: 15px;
+        height: 70px;
+        flex-shrink: 0;
+    }
+
+    .chat-input-area input {
+        font-size: 16px; /* Empêche le zoom auto sur iOS */
+        padding: 12px 20px;
+    }
 
     .chat-bubble-promo {
-        width: 200px;
-        bottom: 80px;
-        font-size: 0.85rem;
-        padding: 12px 15px;
+        width: 180px;
+        bottom: 85px;
+        right: 15px;
+        font-size: 0.8rem;
     }
+}
 
     .message {
         max-width: 90%;
