@@ -809,7 +809,7 @@ footer {
 
 .chat-button:hover {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 15px 30px rgba(64, 207, 212, 0.5);
+    box-shadow: 0 15px 30px rgba(253, 96, 7, 0.4);
 }
 
 .chat-popup {
@@ -836,7 +836,7 @@ footer {
 }
 
 .chat-header {
-    background: var(--bg-dark);
+    background: var(--secondary);
     padding: 20px;
     color: white;
     display: flex;
@@ -899,7 +899,7 @@ footer {
     background: var(--primary);
     color: white;
     border-bottom-right-radius: 4px;
-    box-shadow: 0 4px 10px rgba(64, 207, 212, 0.2);
+    box-shadow: 0 4px 10px rgba(253, 96, 7, 0.2);
 }
 
 .typing-indicator {
@@ -1160,7 +1160,7 @@ footer {
 /* Active State */
 .faq-item.active {
     border-color: var(--primary);
-    box-shadow: 0 10px 25px rgba(64, 207, 212, 0.1);
+    box-shadow: 0 10px 25px rgba(253, 96, 7, 0.1);
 }
 
 .faq-item.active .faq-question {
@@ -1198,7 +1198,7 @@ footer {
     border-radius: 15px;
     font-size: 0.9rem;
     line-height: 1.4;
-    box-shadow: 0 10px 25px rgba(64, 207, 212, 0.3);
+    box-shadow: 0 10px 25px rgba(253, 96, 7, 0.3);
     pointer-events: none;
     animation: bubbleFloat 3s ease-in-out infinite;
     z-index: 999;
@@ -1351,7 +1351,7 @@ footer {
 
 .status-badge {
     display: inline-block;
-    background: rgba(64, 207, 212, 0.1);
+    background: rgba(40, 105, 188, 0.1);
     color: var(--primary);
     padding: 8px 16px;
     border-radius: 50px;
