@@ -1,13 +1,13 @@
-/* CSS VARIABLES - Strict 3 Colors Theme (Cyan / Anthracite / White) */
+/* CSS VARIABLES */
 :root {
-    --primary: #40cfd4;
-    /* Cyan / Turquoise */
-    --primary-glow: rgba(64, 207, 212, 0.3);
-    --secondary: #37bcc0;
-    /* Cyan profond */
+    --primary: #FD6007;
+    /* Orange */
+    --primary-glow: rgba(253, 96, 7, 0.3);
+    --secondary: #2869BC;
+    /* Bleu */
 
-    --bg-dark: #121212;
-    /* Anthracite */
+    --bg-dark: #f5f7fa;
+    /* Gris clair professionnel */
     --bg-panel: rgba(255, 255, 255, 0.95);
     /* Panneaux blancs premium */
 
@@ -71,6 +71,11 @@ h4 {
     text-shadow: 0 0 20px var(--primary-glow);
 }
 
+.highlight-secondary {
+    color: var(--secondary);
+    text-shadow: 0 0 20px rgba(40, 105, 188, 0.3);
+}
+
 img {
     max-width: 100%;
     border-radius: 12px;
@@ -80,6 +85,17 @@ img {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.site-logo {
+    max-height: 50px;
+    width: auto;
+}
+.logo-large .site-logo {
+    max-height: 100px;
+}
+.footer-logo {
+    max-height: 60px;
 }
 
 a {
@@ -130,26 +146,27 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: #fff;
-    /* Texte blanc sur fond bleu vif */
+    /* Texte blanc */
     box-shadow: 0 4px 15px var(--primary-glow);
     border: none;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(64, 207, 212, 0.6);
+    box-shadow: 0 6px 20px rgba(253, 96, 7, 0.6);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    background: var(--secondary);
+    color: #fff;
+    border: none;
 }
 
 .btn-secondary:hover {
-    background: rgba(64, 207, 212, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 105, 188, 0.4);
 }
 
 .btn-small {
@@ -242,7 +259,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--bg-dark);
+    background-color: #121212;
     color: #ffffff;
 }
 
@@ -267,8 +284,8 @@ a {
 
 .badge {
     display: inline-block;
-    background: rgba(0, 136, 255, 0.1);
-    color: var(--primary);
+    background: rgba(40, 105, 188, 0.1);
+    color: var(--secondary);
     padding: 6px 16px;
     border-radius: 30px;
     font-size: 0.85rem;
@@ -276,7 +293,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 136, 255, 0.2);
+    border: 1px solid rgba(40, 105, 188, 0.2);
 }
 
 .hero-light h1 {
@@ -328,10 +345,10 @@ section {
 }
 
 .concept { background-color: #ffffff; color: var(--text-main); }
-.products { background-color: var(--bg-dark); color: #ffffff; }
-.products .section-subtitle { color: #cccccc; }
+.products { background-color: var(--bg-dark); color: var(--text-main); }
+.products .section-subtitle { color: var(--text-muted); }
 .how-it-works { background-color: #ffffff; color: var(--text-main); }
-.location { background-color: var(--bg-dark); color: #ffffff; }
+.location { background-color: var(--bg-dark); color: var(--text-main); }
 .faq { background-color: #ffffff; color: var(--text-main); }
 
 .section-title {
@@ -403,17 +420,17 @@ section {
 }
 
 .product-card .glass-panel:hover {
-    border-color: var(--primary);
-    box-shadow: 0 15px 40px rgba(64, 207, 212, 0.15);
+    border-color: var(--secondary);
+    box-shadow: 0 15px 40px rgba(40, 105, 188, 0.15);
 }
 
 .product-icon {
     font-size: 2.5rem;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 20px;
     height: 70px;
     width: 70px;
-    background: rgba(0, 136, 255, 0.1);
+    background: rgba(40, 105, 188, 0.1);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -474,7 +491,7 @@ section {
 .step-number {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--secondary);
     color: #fff;
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -484,7 +501,7 @@ section {
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    box-shadow: 0 4px 15px rgba(0, 136, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(40, 105, 188, 0.3);
 }
 
 .step h3 {
@@ -585,9 +602,9 @@ section {
 /* FOOTER */
 footer {
     background: var(--bg-dark);
-    color: #ffffff;
+    color: var(--text-main);
     padding: 60px 0 20px;
-    border-top: none;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-grid {
@@ -604,7 +621,7 @@ footer {
 }
 
 .footer-col h4 {
-    color: #ffffff;
+    color: var(--text-main);
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
@@ -778,7 +795,7 @@ footer {
 .chat-button {
     width: 65px;
     height: 65px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
