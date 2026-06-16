@@ -9,6 +9,7 @@ COPY *.css /usr/share/nginx/html/
 COPY *.js /usr/share/nginx/html/
 COPY *.png /usr/share/nginx/html/
 COPY *.svg /usr/share/nginx/html/
+COPY *.jpeg /usr/share/nginx/html/
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
